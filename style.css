@@ -59,3 +59,24 @@ aside h3 { font-size: 1.2rem; margin-bottom: 15px; padding-bottom: 10px; border-
     .container { grid-template-columns: 1fr; } /* Mobile về 1 cột */
     .news-grid { grid-template-columns: 1fr; }
 }
+
+/* Class chia đôi nội dung văn bản (Newspaper Mode) */
+.newspaper-content {
+    column-count: 2;          /* Chia thành 2 cột */
+    column-gap: 40px;         /* Khoảng cách giữa 2 cột */
+    text-align: justify;      /* Canh đều 2 bên cho đẹp */
+    margin-bottom: 30px;
+}
+
+/* Kẻ đường gạch giữa 2 cột chữ (Tuỳ chọn - nếu thích thì giữ, không thì xóa) */
+.newspaper-content {
+    column-rule: 1px solid #eee; 
+}
+
+/* Trên điện thoại thì tự về 1 cột cho dễ đọc */
+@media (max-width: 768px) {
+    .newspaper-content {
+        column-count: 1;
+        column-gap: 0;
+    }
+}
